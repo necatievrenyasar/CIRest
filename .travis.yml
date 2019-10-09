@@ -1,6 +1,4 @@
-language: objective-c
-osx_image: xcode11.1
-
+language: swift
+osx_image: xcode10  
 script:
-  - xcodebuild test -project CIRest.xcodeproj -scheme CIRest -destination "platform=iOS Simulator,name=iPhone 7" -sdk iphonesimulator11.0 CODE_SIGNING_REQUIRED=NO
-First, we specify the language. Type objective-c, even if you're using Swift. Next, we sa
+- xcodebuild -workspace CIRest.xcodeproj -scheme CIRest -derivedDataPath BUILDPATH -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 7' -enableCodeCoverage YES clean build test
