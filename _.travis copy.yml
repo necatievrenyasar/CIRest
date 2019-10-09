@@ -2,6 +2,3 @@ language: swift
 osx_image: xcode10  
 script:
 - xcodebuild -workspace CIRest.xcodeproj -scheme CIRest -derivedDataPath BUILDPATH -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 7' -enableCodeCoverage NO clean build test
-language: swift
-xcode_scheme: CIRest
-xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
